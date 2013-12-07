@@ -1,0 +1,32 @@
+package com.ebook.helloworld;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class HelloActivity extends Activity {
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.layout_hello);
+    }
+    
+    public void showText(View view) {
+    	Button btn = (Button) view;
+    	final String state = btn.getText().toString();
+    	
+    	btn.setText(R.string.button_clicked_text);
+    	TextView tv = (TextView) findViewById(R.id.textView1);
+    	tv.setVisibility(View.VISIBLE);	
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.layout_hello, menu);
+        return true;
+    }
+}

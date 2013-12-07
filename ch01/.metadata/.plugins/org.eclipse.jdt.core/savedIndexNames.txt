@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/tom/workspace/android-ebook/ch01/.metadata/.plugins/org.eclipse.jdt.core
+1563510744.index
+3927879410.index
+34838677.index

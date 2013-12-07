@@ -1,0 +1,37 @@
+package com.example.hellolifecycle;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+
+public class LifecycleActivity extends Activity {
+
+	private static final String logTag = "LifecycleActivity";
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Log.i(logTag, "onCreate called");
+        setContentView(R.layout.activity_lifecycle);
+    }
+
+    @Override
+    protected void onStart() {
+    	super.onStart();
+    	Log.i(logTag, "onStart called");
+    }
+
+    @Override
+    protected void onRestart() {
+    	super.onRestart();
+    }
+    
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.lifecycle, menu);
+        return true;
+    }
+    
+}

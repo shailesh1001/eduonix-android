@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;button&apos; in &apos;com.example.ex01.MainActivity.showText(...)&apos; to &apos;btn&apos;&#x0A;- Original project: &apos;ex01&apos;&#x0A;- Original element: &apos;com.example.ex01.MainActivity.showText(View).button&apos;&#x0A;- Renamed element: &apos;button&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;button&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;com.example.ex01{MainActivity.java[MainActivity~showText~QView;@button!456!485!463!468!QButton;!0!false" name="btn" references="true" stamp="1386445385212" version="1.0"/>
+</session>
