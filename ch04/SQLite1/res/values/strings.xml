@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SQLite1</string>
+    <string name="action_settings">Settings</string>
+    <string name="population_lbl">Population:</string>
+    <string name="area_lbl">Area:</string>
+    <string name="space"> </string>
+    <string name="area_descriptor">sq. miles</string>
+
+</resources>
