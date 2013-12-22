@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+import static com.example.sqlite1.StringUtils.*;
 
 public class InsertActivity extends Activity {
 
@@ -25,9 +26,6 @@ public class InsertActivity extends Activity {
 		tvArea = (TextView) findViewById(R.id.areaEdit);		
 	}
 	
-	private boolean isEmpty(String value) {
-		return value == null || value.trim().isEmpty();
-	}
 	public void insertDB(View view) {
 		final String name = tvName.getText().toString();
 		final String population = tvPopulation.getText().toString();

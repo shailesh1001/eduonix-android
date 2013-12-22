@@ -16,12 +16,15 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
 	public static final int REQUEST_UPDATE = 1;
 	
 	public static final int REQUEST_INSERT = 2;
+
+	public static final int REQUEST_DELETE = 3;
 	
 	private CountryDB countryDB;
 	
@@ -108,6 +111,21 @@ public class MainActivity extends Activity {
 				db.close();
 			}
 		}
+		else if (requestCode == REQUEST_DELETE) {
+			if (resultCode == RESULT_OK) {
+				final String countryName = data.getExtras().getString("countryName");
+				SQLiteDatabase db = countryDB.getWritableDatabase();
+				
+				final int rowCount = db.delete("countries", "name = ?", new String[] {countryName});
+				countries = db.query("countries", columnNames, null, null, null, null, null);
+				adapter.changeCursor(countries);	
+				db.close();
+				
+				if (rowCount == 0) {
+					Toast.makeText(this, "No such country was found: " + countryName, Toast.LENGTH_SHORT).show();
+				}
+			}
+		}
 	}
 	
 	@Override
@@ -128,10 +146,12 @@ public class MainActivity extends Activity {
 		boolean result = true;
 		switch(item.getItemId()) {
 			case R.id.itemInsert:
-				// Toast.makeText(this, "Insert tapped", Toast.LENGTH_SHORT).show();
 				Intent insertIntent = new Intent(MainActivity.this, InsertActivity.class);
 				startActivityForResult(insertIntent, REQUEST_INSERT);
 				break;
+			case R.id.itemDelete:
+				Intent deleteIntent = new Intent(MainActivity.this, DeleteActivity.class);
+				startActivityForResult(deleteIntent, REQUEST_DELETE);
 			default:
 				result = super.onOptionsItemSelected(item);
 		}
