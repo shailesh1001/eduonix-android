@@ -2,7 +2,8 @@
 <resources>
 
     <string name="app_name">SQLite1</string>
-    <string name="update_db_name">Update Database</string>
+    <string name="update_db_name">Update</string>
+    <string name="insert_db_name">Insert</string>
     <string name="action_settings">Settings</string>
     <string name="population_lbl">Population:</string>
     <string name="area_lbl">Area:</string>
@@ -12,5 +13,6 @@
     <string name="population_label">Population:</string>
     <string name="area_label">Area:</string>
     <string name="update_button">Update</string>
+    <string name="insert_button">Insert</string>
 
 </resources>

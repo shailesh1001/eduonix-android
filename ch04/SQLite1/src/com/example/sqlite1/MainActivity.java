@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.os.Bundle;
 import android.provider.BaseColumns;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.CursorAdapter;
@@ -19,6 +20,8 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
 	public static final int REQUEST_UPDATE = 1;
+	
+	public static final int REQUEST_INSERT = 2;
 	
 	private CountryDB countryDB;
 	
@@ -90,6 +93,21 @@ public class MainActivity extends Activity {
 				db.close();
 			}
 		}
+		else if (requestCode == REQUEST_INSERT) {
+			if (resultCode == RESULT_OK) {
+				String[] results = data.getExtras().getStringArray("results");
+				SQLiteDatabase db = countryDB.getWritableDatabase();
+				
+				ContentValues cv = new ContentValues();
+				cv.put("name", results[0]);
+				cv.put("population", results[1]);
+				cv.put("area", results[2]);
+				db.insert("countries", null, cv);
+				countries = db.query("countries", columnNames, null, null, null, null, null);
+				adapter.changeCursor(countries);	
+				db.close();
+			}
+		}
 	}
 	
 	@Override
@@ -101,8 +119,23 @@ public class MainActivity extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		boolean result = true;
+		switch(item.getItemId()) {
+			case R.id.itemInsert:
+				// Toast.makeText(this, "Insert tapped", Toast.LENGTH_SHORT).show();
+				Intent insertIntent = new Intent(MainActivity.this, InsertActivity.class);
+				startActivityForResult(insertIntent, REQUEST_INSERT);
+				break;
+			default:
+				result = super.onOptionsItemSelected(item);
+		}
+		return result;
 	}
 
 }
