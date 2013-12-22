@@ -24,26 +24,39 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f08000b;
+        public static final int areaEdit=0x7f080009;
+        public static final int areaLabel=0x7f080008;
         public static final int lvCountries=0x7f080000;
+        public static final int nameEdit=0x7f080005;
+        public static final int nameLabel=0x7f080004;
+        public static final int populationEdit=0x7f080007;
+        public static final int populationLabel=0x7f080006;
         public static final int tvArea=0x7f080003;
         public static final int tvName=0x7f080001;
         public static final int tvPopulation=0x7f080002;
+        public static final int updateDB=0x7f08000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int country_item=0x7f030001;
+        public static final int update_view=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050001;
+        public static final int action_settings=0x7f050002;
         public static final int app_name=0x7f050000;
-        public static final int area_descriptor=0x7f050005;
-        public static final int area_lbl=0x7f050003;
-        public static final int population_lbl=0x7f050002;
-        public static final int space=0x7f050004;
+        public static final int area_descriptor=0x7f050006;
+        public static final int area_label=0x7f050009;
+        public static final int area_lbl=0x7f050004;
+        public static final int name_label=0x7f050007;
+        public static final int population_label=0x7f050008;
+        public static final int population_lbl=0x7f050003;
+        public static final int space=0x7f050005;
+        public static final int update_button=0x7f05000a;
+        public static final int update_db_name=0x7f050001;
     }
     public static final class style {
         /** 

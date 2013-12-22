@@ -22,6 +22,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity 
+            android:name=".UpdateActivity"
+            android:label="@string/update_db_name">            
+        </activity>
     </application>
 
 </manifest>
