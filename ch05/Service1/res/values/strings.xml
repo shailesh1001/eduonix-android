@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Service1</string>
+    <string name="action_settings">Settings</string>
+    <string name="tvPrompt_text">Enter numbers:</string>
+    <string name="btnAverage_text">Average</string>
+    <string name="btnStop_text">Stop</string>
+
+</resources>
