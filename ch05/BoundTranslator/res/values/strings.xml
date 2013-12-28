@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">BoundTranslator</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_digit_default">1</string>
+    <string name="second_digit_default">2</string>
+    <string name="third_digit_default">3</string>
+    <string name="submit_button">Submit</string>
+    <integer-array name="digit_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </integer-array>
+    <string-array name="digit_text_array">
+        <item>zero</item>
+        <item>one</item>
+        <item>two</item>
+        <item>three</item>
+        <item>four</item>
+        <item>five</item>
+        <item>six</item>
+        <item>seven</item>
+        <item>eight</item>
+        <item>nine</item>
+    </string-array>
+    <string name="no_translation_found">"No translation found for %d!"</string>    
+   
+</resources>
