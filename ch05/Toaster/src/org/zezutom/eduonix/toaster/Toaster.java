@@ -41,7 +41,7 @@ public class Toaster extends IntentService {
 	@Override
 	public void onDestroy() {
 		super.onDestroy();
-		Log.i(MainActivity.class.getName(), String.format("Let's toast at %s", getTime()));		
+		Log.i(Toaster.class.getName(), String.format("Let's toast at %s", getTime()));		
 		Toast.makeText(this,
 				String.format("Time for a toast after %.2f seconds!", getDuration()),
 				Toast.LENGTH_SHORT).show();
